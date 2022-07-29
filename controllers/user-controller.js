@@ -18,6 +18,7 @@ const register =  async (req, res) => {    //handling as promise
         password: userCreated.password,
         token: jwtToken(userCreated._id),
     });
+    userCreated.save()
 }
 
 //login
